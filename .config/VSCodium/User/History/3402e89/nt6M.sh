@@ -1,0 +1,161 @@
+#!/bin/bash
+# Color codes
+GREEN='\033[1;32m'
+CYAN='\033[1;36m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+THEME="$1"
+THEME_DIR="$HOME/.config/colorschemes/$THEME"
+SYMLINK_PATH="$HOME/.config/hypr/hyprlock/wallpaper"
+
+if [ -z "$THEME" ]; then
+    echo -e "${YELLOW}Usage: $0 <theme-name>${NC}"
+    exit 1
+fi
+
+if [ ! -d "$THEME_DIR" ]; then
+    echo -e "${YELLOW}Theme '$THEME' does not exist at $THEME_DIR${NC}"
+    notify-send "Theme Error" "Theme '$THEME' not found" -u critical
+    exit 1
+fi
+
+# Track current theme
+CURRENT_THEME_FILE="$HOME/.config/colorschemes/.current-theme"
+echo "$THEME" > "$CURRENT_THEME_FILE"
+
+echo -e "${GREEN}Applying theme: $THEME${NC}\n"
+notify-send "Theme Switching" "Applying theme: $THEME" -t 3000
+
+# Hypr config
+echo -e "${CYAN}-> Updating Hyprland configuration..."
+cp "$THEME_DIR/hypr/colors.conf" "$HOME/.config/hypr/colors/colors.conf" > /dev/null 2>&1
+echo ""
+
+# Waybar config
+echo -e "${CYAN}--> Applying Waybar CSS..."
+cp "$THEME_DIR/waybar/colors.css" "$HOME/.config/waybar/colors/colors.css" > /dev/null 2>&1
+echo -e "${CYAN}--> Restarting Waybar..."
+pkill waybar > /dev/null 2>&1 && ~/.config/waybar/scripts/launch.sh > /dev/null 2>&1 disown
+echo ""
+
+# Wallpaper
+echo -e "${CYAN}-> Setting wallpaper...${NC}"
+WALLPAPER_DIR="$THEME_DIR/wallpapers"
+
+# Create state file if it doesn't exist
+touch "$WALLPAPER_STATE"
+
+# Get saved wallpaper for this theme
+SAVED_WALLPAPER=$(grep "^$THEME:" "$WALLPAPER_STATE" | cut -d':' -f2-)
+
+if [ -n "$SAVED_WALLPAPER" ] && [ -f "$SAVED_WALLPAPER" ]; then
+    # Use saved wallpaper
+    WALLPAPER="$SAVED_WALLPAPER"
+    echo -e "${CYAN}   Using saved wallpaper${NC}"
+elif [ -d "$WALLPAPER_DIR" ]; then
+    # Get first wallpaper from directory (sorted alphabetically)
+    WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | sort | head -n1)
+    
+    if [ -n "$WALLPAPER" ]; then
+        # Save this as the default for this theme
+        sed -i "/^$THEME:/d" "$WALLPAPER_STATE"
+        echo "$THEME:$WALLPAPER" >> "$WALLPAPER_STATE"
+        echo -e "${CYAN}   Using first wallpaper (default)${NC}"
+    else
+        echo -e "${YELLOW}   No wallpapers found in $WALLPAPER_DIR${NC}"
+    fi
+else
+    echo -e "${YELLOW}   Wallpaper directory not found: $WALLPAPER_DIR${NC}"
+fi
+
+if [ -n "$WALLPAPER" ] && [ -f "$WALLPAPER" ]; then
+    swww img "$WALLPAPER" --transition-type center --transition-fps 144 --transition-step 255 > /dev/null 2>&1
+    # Also update hyprlock symlink
+    ln -sf "$WALLPAPER" ~/.config/hypr/hyprlock/wallpaper > /dev/null 2>&1
+else
+    echo -e "${YELLOW}   Could not set wallpaper${NC}"
+fi
+echo ""
+
+# GTK Theme
+if [ -f "$THEME_DIR/gtk-theme" ]; then
+    GTK_THEME_NAME=$(cat "$THEME_DIR/gtk-theme")
+    echo -e "${CYAN}-> Setting GTK theme to '$GTK_THEME_NAME'…"
+    gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME_NAME" > /dev/null 2>&1
+else
+    echo -e "${YELLOW}--> GTK theme file not found. Skipping."
+fi
+echo ""
+
+GTK4_SRC="$THEME_DIR/gtk-4.0"
+GTK4_DST="$HOME/.config/gtk-4.0"
+
+if [[ -d "$GTK4_SRC" ]]; then
+    echo -e "${CYAN}-> Linking GTK4 theme files…"
+    mkdir -p "$GTK4_DST"
+    ln -sf "$GTK4_SRC/gtk.css" "$GTK4_DST/gtk.css"
+    ln -sf "$GTK4_SRC/gtk-dark.css" "$GTK4_DST/gtk-dark.css"
+    ln -sfn "$GTK4_SRC/assets" "$GTK4_DST/assets"
+else
+    echo -e "${YELLOW}--> No GTK4 theme files found in $GTK4_SRC. Skipping."
+fi
+echo ""
+
+# Reload Hyprland config
+echo -e "${CYAN}-> Reloading Hyprland configuration…"
+hyprctl reload > /dev/null 2>&1
+echo ""
+
+# Terminal theme
+echo -e "${CYAN}--> Applying terminal theme…"
+case "$THEME" in
+    catppuccin |everforest-dark | rose-pine | kanagawa | tokyo-night | nightfox )
+      cp "$THEME_DIR/kitty/colors.conf" "$HOME/.config/kitty/colors/colors.conf" > /dev/null 2>&1
+      ;;
+    *)
+      echo -e "${YELLOW}-> No terminal theme defined for $THEME. Skipping."
+      ;;
+esac
+kill -SIGUSR1 "$(pgrep kitty)" > /dev/null 2>&1
+echo ""
+
+# SwayNC theme
+#echo -e "${CYAN}-> Applying SwayNC theme…"
+#cp "$THEME_DIR/swaync/style.css" "$HOME/.config/swaync/style.css" > /dev/null 2>&1
+#pkill swaync > /dev/null 2>&1 && swaync > /dev/null 2>&1 & disown
+#echo ""
+
+# Rofi
+echo -e "${CYAN}--> Applying Rofi theme...${NC}"
+cp "$THEME_DIR/rofi/colors.rasi" "$HOME/.config/rofi/colors.rasi" > /dev/null 2>&1
+echo ""
+
+# NvChad theme
+echo -e "${CYAN}-> Applying NvChad theme...${NC}"
+cp "$THEME_DIR/nvim/lua/chadrc.lua" "$HOME/.config/nvim/lua/chadrc.lua" > /dev/null 2>&1
+echo -e "${CYAN}-> Theme will auto-reload in Neovim (within 2 seconds)${NC}"
+echo ""
+
+# VSCodium theme
+if [ -f "$THEME_DIR/vscodium-theme" ]; then
+    VSCODIUM_THEME=$(cat "$THEME_DIR/vscodium-theme")
+    VSCODIUM_SETTINGS="$HOME/.config/VSCodium/User/settings.json"
+
+    echo -e "${CYAN}-> Setting VSCodium theme to '$VSCODIUM_THEME'...${NC}"
+
+    # Use jq if available for robust JSON manipulation
+    if command -v jq >/dev/null 2>&1; then
+        tmpfile=$(mktemp)
+        jq --arg theme "$VSCODIUM_THEME" '.["workbench.colorTheme"] = $theme' "$VSCODIUM_SETTINGS" > "$tmpfile" && mv "$tmpfile" "$VSCODIUM_SETTINGS"
+    else
+        # Fallback: naive sed replacement
+        sed -i "s/\"workbench.colorTheme\": \".*\"/\"workbench.colorTheme\": \"$VSCODIUM_THEME\"/" "$VSCODIUM_SETTINGS"
+    fi
+else
+    echo -e "${YELLOW}-> VSCodium theme file not found. Skipping.${NC}"
+fi
+echo ""
+
+# Final success notification
+notify-send "Theme Applied" "Successfully switched to: $THEME" -t 5000

@@ -1,0 +1,14 @@
+2025-11-22 10:15:20.310 [info] Extension host with pid 2136 started
+2025-11-22 10:15:20.310 [info] Skipping acquiring lock for /home/inu/.config/VSCodium/User/workspaceStorage/8f5711628e0e4898227fcaab2fce01b7.
+2025-11-22 10:15:20.321 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-11-22 10:15:20.346 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-11-22 10:15:20.362 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-11-22 10:15:20.404 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-11-22 10:15:20.486 [info] Eager extensions activated
+2025-11-22 10:15:20.489 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-11-22 10:15:20.516 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-11-22 10:15:20.532 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-11-22 10:15:20.537 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-11-22 10:15:20.558 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2025-11-22 10:15:20.569 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2025-11-22 10:15:20.787 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'

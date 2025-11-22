@@ -1,0 +1,24 @@
+{
+    "workbench.statusBar.visible": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "workbench.editor.showTabs": "none",
+    "editor.fontSize": 16,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.wordWrap": "on",
+    "window.closeWhenEmpty": true,
+    "window.menuBarVisibility": "toggle",
+    "editor.mouseWheelZoom": true,
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "top",
+    "window.controlsStyle": "hidden",
+    "editor.fontLigatures": true,
+    "apc.header": {
+
+    },
+    "apc.listRow": {
+
+    },
+    "editor.fontFamily": "'UbuntuMono-Regular', monospace"
+}

@@ -1,0 +1,5 @@
+audio.play_bitrate_non_metered_migrated=true
+connect.dial_devices="[]"
+connect.mdns_devices="[]"
+app.browser.zoom-level=100
+app.player.volume=42115

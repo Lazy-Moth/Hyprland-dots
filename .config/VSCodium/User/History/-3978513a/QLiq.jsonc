@@ -1,0 +1,157 @@
+{
+  "position": "top",
+  "margin-top": 15,
+
+  "modules-left": ["custom/launcher", "clock", "custom/pacman", "hyprland/submap", "custom/media"],
+  "modules-center": [
+    "custom/notification", "hyprland/workspaces",
+  ],
+  "modules-right": ["pulseaudio", "network", "bluetooth" ],
+
+  "hyprland/submap": {
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "cursor": "pointer",
+    "format": "{id}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "urgent": ""
+    },
+    "persistent-workspaces": {
+        "*": 5
+    },
+    "on-click": "activate",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "on-scroll-up": "hyprctl dispatch workspace e-1"
+  },
+
+    "bluetooth": {
+    "format": "{status}",
+    "format-on": "󰂲 Garama",
+    "format-connected": "󰂱 Hegale",
+    "on-click-right": "bluetoothctl disconnect",
+    "on-click": "bluetoothctl connect CC:14:BC:37:24:E0",
+    "on-click-middle": "blueman-manager",
+    "tooltip": false
+  },
+
+  "custom/weather": {
+    "exec": "${HOME}/.config/waybar/scripts/get-weather.sh",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "bash /home/$USER/.config/waybar/scripts/app-launcher.sh",
+    "tooltip": false
+  },
+
+  "custom/media": {
+    "format": "{}",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 25,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "smooth-scrolling-threshold": 1, 
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" 
+  },
+
+  "custom/pacman": {
+    "format": "󰅢  {}",
+    "interval": "1800",
+    "exec": "checkupdates | wc -l",
+    "on-click": "kitty --hold yay -Syu",
+    "signal": 8,
+    "tooltip-format": "{} updates available"
+  },
+
+  "battery": {
+    "format": "{icon}   {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "tooltip-format": "Battery is at {capacity}%"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+    "format-icons": {
+      "headphone": "",
+      "headphone-muted": "󰟎",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "tooltip-format": "Volume: {volume}%"
+  },
+
+  "network": {
+    "interface": "enp5s0",
+    "format": "{ifname}",
+    "format-wifi": "{icon}  {essid}",
+    "format-ethernet": "󰈀 Ethernet",
+    "format-disconnected": "󰤨  No connection",
+    "max-length": 50,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "󰥔  {:%I:%M %p}",
+    "cursor": "pointer",
+    "format-alt": "  {:%Y, %d %B, %A}",
+    "tooltip": false
+  },
+
+
+"power-profiles-daemon": {
+  "format": "{icon}",
+  "tooltip": false,
+  "format-icons": {
+    "default": "lol",
+    "performance": "󰠠",
+    "balanced": "󰚀",
+    "power-saver": "󱤅"
+  }
+}
+
+}

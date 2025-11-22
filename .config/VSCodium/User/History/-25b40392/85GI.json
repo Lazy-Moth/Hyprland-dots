@@ -1,0 +1,26 @@
+{
+  "workbench.colorTheme": "Rosé Pine (no italics)",
+  "editor.fontSize": 16,
+  "editor.overtypeCursorStyle": "line",
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "terminal.integrated.cursorStyle": "line",
+  "workbench.editor.enablePreview": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "native",
+  "window.customMenuBarAltFocus": false,
+  "breadcrumbs.enabled": false,
+  "workbench.statusBar.visible": false,
+  "editor.minimap.enabled": false,
+  "editor.padding.bottom": 10,
+  "editor.padding.top": 10,
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontFamily"
+  ],
+  "editor.fontFamily": "'Operator Mono', 'monospace', monospace",
+  "explorer.confirmDelete": false,
+  "workbench.startupEditor": "none"
+}

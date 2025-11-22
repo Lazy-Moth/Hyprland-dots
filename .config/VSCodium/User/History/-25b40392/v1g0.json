@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "Nightfox",
+    "workbench.statusBar.visible": false,
+    "editor.fontSize": 16,
+    "editor.overtypeCursorStyle": "line",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "terminal.integrated.cursorStyle": "line",
+    "workbench.editor.enablePreview": false,
+    "window.menuBarVisibility": "compact",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'Operator Mono', 'monospace', monospace",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontFamily"
+    ]
+
+}

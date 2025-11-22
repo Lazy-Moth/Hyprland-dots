@@ -1,0 +1,105 @@
+@import "~/.config/rofi/colors.rasi"
+
+* {
+    font: "Operator Mono 12";
+    border: 0;
+    border-radius: 15px;
+    padding: 0;
+}
+
+window {
+    width: 1200px;
+    border: 0;
+    border-radius: 15px;
+    background-color: @bg0;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    background-colon: @bg0;
+    padding: 18px 20px;
+}
+
+inputbar {
+    background-color: @bg0;
+	border-color: @bg2;
+	border: 2;
+    text-color: @blue;
+    border-radius: 12px;
+    padding: 10px 14px;
+    spacing: 8px;
+}
+
+prompt {
+    enabled: true;
+	text-color: @blue;
+}
+
+entry {
+	placeholder: "Selecting theme...";
+    padding: 0px 8px ;
+    background-color: @bg0;
+	hide-cursor-on-empty: true;
+    text-color: @fg;
+}
+
+listview {
+    spacing: 10px;
+    lines: 1;
+    columns: 8;
+    fixed-height: false;
+	background-color: @bg0;
+    scrollbar: false;
+}
+
+element {
+    orientation: vertical;
+    padding: 10px 14px 10px 30px;
+    border-radius: 12px;
+}
+
+element-icon {
+    size: 100px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    background-colon: transparent;
+    border-radius: 8px;
+}
+
+element-text {
+	text-color: inherit;
+	background-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    padding: 0 0 1px 0;
+}
+
+element normal.normal, element.alternate.normal {
+    background-color: @bg0;
+	text-color: @fg;
+	border-color: transparent;
+}
+
+element.selected.normal {
+	text-color: @blue;
+	background-color: @bg3;
+	border-color: transparent;
+}
+
+inputbar {
+    children: [textbox-prompt-colon, entry];
+}
+
+textbox-prompt-colon {
+    expand: false;
+	str: "Select Theme";
+    text-color: @blue;
+    background-color: @bg0;
+    padding: 0 8px 0 0;
+    border: 0;
+}
+
+entry {
+    placeholder: "Selecting Wallpaper...";
+    text-color: @fg;
+}

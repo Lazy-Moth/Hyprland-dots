@@ -1,0 +1,7 @@
+2025-11-22 10:16:26.008 [info] Started local extension host with pid 2169.
+2025-11-22 10:16:26.791 [error] Cannot read properties of undefined (reading 'extensionId'): TypeError: Cannot read properties of undefined (reading 'extensionId')
+    at t (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:2745)
+    at tIt.recommendRemoteExtensionIfNeeded (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:3495)
+2025-11-22 10:16:32.698 [info] [perf] Render performance baseline is 13ms
+2025-11-22 10:18:08.663 [error] [File Watcher ('parcel')] Unexpected error: inotify_add_watch on '/home/inu/.config/vesktop/sessionData/blob_storage/7dd30005-7f80-44b1-80d3-f3a708502e67' failed: No such file or directory (EUNKNOWN) (path: /home/inu)
+2025-11-22 10:18:08.663 [error] [File Watcher (universal)] inotify_add_watch on '/home/inu/.config/vesktop/sessionData/blob_storage/7dd30005-7f80-44b1-80d3-f3a708502e67' failed: No such file or directory

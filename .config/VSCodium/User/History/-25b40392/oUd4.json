@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Nightfox",
+    "workbench.statusBar.visible": false,
+    "editor.fontSize": 16,
+    "editor.overtypeCursorStyle": "line",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "terminal.integrated.cursorStyle": "line",
+    "window.menuBarVisibility": "compact"
+
+}

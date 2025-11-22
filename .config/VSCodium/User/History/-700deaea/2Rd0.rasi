@@ -1,0 +1,110 @@
+@import "colors.rasi"
+
+* {
+    font: "Operator Mono 12";
+    border: 0;
+    border-radius: 15px;
+    padding: 0;
+}
+
+configuration {
+    modi: "drun";
+    show-icons: false;
+    drun-display-format: "{name}";
+    display-drun: "drun";
+    prompt: "";
+}
+
+window {
+    width: 480px;
+    border: 0;
+    border-radius: 15px;
+    background-color: @bg0;
+    outline: 0;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    padding: 18px 20px;
+}
+
+inputbar {
+    background-color: @bg0;
+    border-color: @bg2;
+    border: 2;
+    text-color: @blue;
+    border-radius: 12px;
+    padding: 10px 14px;
+    spacing: 8px;
+    outline: 0;
+}
+
+prompt {
+    enabled: true;
+    text-color: @blue;
+}
+entry {
+    placeholder: "Selecting app...";
+    padding: 0px 8px;
+    background-color: @bg0;
+    hide-cursor-on-empty: true;
+    text-color: @fg;
+    outline: 0;
+}
+
+listview {
+    spacing: 10px;
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+    background-color: @bg0;
+    scrollbar: false;
+    border: 0;
+    padding: 0;
+    margin: 10 0 0 0;
+    outline: 0;
+}
+
+element {
+    padding: 10px 14px 10px 30px;
+    border-radius: 12px;
+    border: 0;
+    border-width: 0;
+    border-color: transparent;
+    outline: 0;
+    outline-width: 0;
+    outline-color: transparent;
+    background-color: @bg0;
+    text-color: @fg;
+}
+
+element-icon {
+    size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+element-text {
+    text-color: inherit;
+    background-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    padding: 0 0 1px 0;
+}
+
+element normal.normal, element.alternate.normal {
+    background-color: @bg1;  /* невыбранные — фон bg1 как ты хотел */
+    text-color: @fg;
+    border: 0;
+    outline: 0;
+}
+
+element.selected.normal, element.selected {
+    text-color: @blue;
+    background-color: @bg3;
+    border: 0;
+    border-width: 0;
+    border-color: transparent;
+    outline: 0;
+    outline-color: transparent;
+}

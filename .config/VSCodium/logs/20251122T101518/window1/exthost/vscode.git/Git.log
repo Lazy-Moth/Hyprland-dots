@@ -1,0 +1,133 @@
+2025-11-22 10:15:20.440 [info] [main] Log level: Info
+2025-11-22 10:15:20.440 [info] [main] Validating found git in: "git"
+2025-11-22 10:15:20.440 [info] [main] Using git "2.52.0" from "git"
+2025-11-22 10:15:20.440 [info] [Model][doInitialScan] Initial repository scan started
+2025-11-22 10:15:20.446 [info] > git rev-parse --show-toplevel [4ms]
+2025-11-22 10:15:20.446 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.451 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.451 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.461 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.461 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.463 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.463 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.466 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.466 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.469 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.469 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.471 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.471 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.474 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.474 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.476 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.476 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.478 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.478 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.489 [info] > git rev-parse --show-toplevel [9ms]
+2025-11-22 10:15:20.489 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.588 [info] > git rev-parse --show-toplevel [7ms]
+2025-11-22 10:15:20.588 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.593 [info] > git rev-parse --show-toplevel [2ms]
+2025-11-22 10:15:20.597 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [2ms]
+2025-11-22 10:15:20.603 [info] [Model][openRepository] Opened repository (path): /home/inu/.oh-my-zsh
+2025-11-22 10:15:20.603 [info] [Model][openRepository] Opened repository (real path): /home/inu/.oh-my-zsh
+2025-11-22 10:15:20.603 [info] [Model][openRepository] Opened repository (kind): repository
+2025-11-22 10:15:20.609 [info] > git config --get commit.template [0ms]
+2025-11-22 10:15:20.609 [info] > git rev-parse --show-toplevel [3ms]
+2025-11-22 10:15:20.609 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.614 [info] > git rev-parse --show-toplevel [3ms]
+2025-11-22 10:15:20.614 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.616 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.616 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.618 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [6ms]
+2025-11-22 10:15:20.618 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.618 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.624 [info] > git rev-parse --show-toplevel [4ms]
+2025-11-22 10:15:20.624 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.626 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2025-11-22 10:15:20.627 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.627 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.629 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.629 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.632 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.660 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.662 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.662 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.664 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.664 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.666 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.666 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.668 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.668 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.670 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.670 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.672 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.672 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.674 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.674 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.676 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.676 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.678 [info] > git rev-parse --show-toplevel [0ms]
+2025-11-22 10:15:20.678 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.681 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:20.685 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [1ms]
+2025-11-22 10:15:20.688 [info] [Model][openRepository] Opened repository (path): /home/inu/powerlevel10k
+2025-11-22 10:15:20.688 [info] [Model][openRepository] Opened repository (real path): /home/inu/powerlevel10k
+2025-11-22 10:15:20.688 [info] [Model][openRepository] Opened repository (kind): repository
+2025-11-22 10:15:20.692 [info] > git config --get commit.template [2ms]
+2025-11-22 10:15:20.695 [info] > git rev-parse --show-toplevel [3ms]
+2025-11-22 10:15:20.699 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [3ms]
+2025-11-22 10:15:20.703 [info] [Model][openRepository] Opened repository (path): /home/inu/sddm-astronaut-theme
+2025-11-22 10:15:20.703 [info] [Model][openRepository] Opened repository (real path): /home/inu/sddm-astronaut-theme
+2025-11-22 10:15:20.703 [info] [Model][openRepository] Opened repository (kind): repository
+2025-11-22 10:15:20.703 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [8ms]
+2025-11-22 10:15:20.709 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/inu/powerlevel10k/.git/refs/remotes/origin/master'
+2025-11-22 10:15:20.709 [info] > git rev-parse refs/remotes/origin/master [1ms]
+2025-11-22 10:15:20.714 [info] > git rev-parse --show-toplevel [7ms]
+2025-11-22 10:15:20.714 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-11-22 10:15:20.714 [info] [Model][doInitialScan] Initial repository scan completed - repositories (3), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-11-22 10:15:20.714 [info] > git config --get commit.template [9ms]
+2025-11-22 10:15:20.715 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-11-22 10:15:20.723 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [5ms]
+2025-11-22 10:15:20.724 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/inu/sddm-astronaut-theme/.git/refs/remotes/origin/master'
+2025-11-22 10:15:20.725 [info] > git rev-parse refs/remotes/origin/master [1ms]
+2025-11-22 10:15:20.729 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-11-22 10:15:20.768 [info] > git status -z -uall [57ms]
+2025-11-22 10:15:20.782 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2025-11-22 10:15:20.785 [info] > git config --get --local branch.master.vscode-merge-base [1ms]
+2025-11-22 10:15:20.786 [info] > git config --get commit.template [4ms]
+2025-11-22 10:15:20.805 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [19ms]
+2025-11-22 10:15:20.809 [info] > git merge-base refs/heads/master refs/remotes/origin/master [2ms]
+2025-11-22 10:15:20.811 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [6ms]
+2025-11-22 10:15:20.812 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/inu/powerlevel10k/.git/refs/remotes/origin/master'
+2025-11-22 10:15:20.813 [info] > git rev-parse refs/remotes/origin/master [1ms]
+2025-11-22 10:15:20.816 [info] > git diff --name-status -z --diff-filter=ADMR 36f3045d69d1ba402db09d09eb12b42eebe0fa3b...refs/remotes/origin/master [5ms]
+2025-11-22 10:15:20.817 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-11-22 10:15:20.818 [info] > git status -z -uall [196ms]
+2025-11-22 10:15:20.823 [info] > git status -z -uall [8ms]
+2025-11-22 10:15:20.823 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2025-11-22 10:15:20.827 [info] > git config --get --local branch.master.vscode-merge-base [2ms]
+2025-11-22 10:15:20.828 [info] > git config --get commit.template [5ms]
+2025-11-22 10:15:20.830 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [2ms]
+2025-11-22 10:15:20.832 [info] > git status -z -uall [105ms]
+2025-11-22 10:15:20.832 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2025-11-22 10:15:20.837 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2025-11-22 10:15:20.839 [info] > git merge-base refs/heads/master refs/remotes/origin/master [7ms]
+2025-11-22 10:15:20.841 [info] > git config --get --local branch.master.vscode-merge-base [2ms]
+2025-11-22 10:15:20.841 [warning] [Git][config] git config failed: Failed to execute git
+2025-11-22 10:15:20.842 [info] > git config --get commit.template [5ms]
+2025-11-22 10:15:20.843 [info] > git diff --name-status -z --diff-filter=ADMR c5f64018fffbffe6624690e929b6ff745514336b...refs/remotes/origin/master [3ms]
+2025-11-22 10:15:20.849 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2025-11-22 10:15:20.849 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [5ms]
+2025-11-22 10:15:20.850 [info] > git reflog master --grep-reflog=branch: Created from *. [8ms]
+2025-11-22 10:15:20.853 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/inu/sddm-astronaut-theme/.git/refs/remotes/origin/master'
+2025-11-22 10:15:20.853 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [2ms]
+2025-11-22 10:15:20.853 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2025-11-22 10:15:20.853 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2025-11-22 10:15:20.855 [info] > git rev-parse refs/remotes/origin/master [2ms]
+2025-11-22 10:15:20.858 [info] > git merge-base refs/heads/master refs/remotes/origin/master [4ms]
+2025-11-22 10:15:20.859 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2025-11-22 10:15:20.860 [info] > git diff --name-status -z --diff-filter=ADMR 3acfa1b9f643265bcccf524a86e5c4964c4ba52c...refs/remotes/origin/master [1ms]
+2025-11-22 10:15:20.865 [info] > git status -z -uall [19ms]
+2025-11-22 10:15:20.891 [info] > git status -z -uall [35ms]
+2025-11-22 10:15:23.307 [info] > git rev-parse --show-toplevel [1ms]
+2025-11-22 10:15:23.307 [info] fatal: not a git repository (or any of the parent directories): .git
