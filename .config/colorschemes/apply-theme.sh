@@ -120,11 +120,11 @@ esac
 kill -SIGUSR1 "$(pgrep kitty)" > /dev/null 2>&1
 echo ""
 
-# SwayNC theme
-#echo -e "${CYAN}-> Applying SwayNC theme…"
-#cp "$THEME_DIR/swaync/style.css" "$HOME/.config/swaync/style.css" > /dev/null 2>&1
-#pkill swaync > /dev/null 2>&1 && swaync > /dev/null 2>&1 & disown
-#echo ""
+ SwayNC theme
+echo -e "${CYAN}-> Applying SwayNC theme…"
+cp "$THEME_DIR/swaync/colors.css" "$HOME/.config/swaync/colors/colors.css" > /dev/null 2>&1
+pkill swaync > /dev/null 2>&1 && swaync > /dev/null 2>&1 & disown
+echo ""
 
 # Rofi
 echo -e "${CYAN}--> Applying Rofi theme...${NC}"
