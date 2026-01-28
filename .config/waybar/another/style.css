@@ -1,0 +1,155 @@
+@import "colors/colors.css";
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo", "Noto Sans CJK JP";
+  font-size: 20px;
+  min-height: 0;
+  font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-center {
+    background: @bg0;
+    border-radius: 50px;
+    padding: 8px 5px;
+}
+
+#battery,
+#pulseaudio,
+#backlight,
+#custom-pacman,
+#network,
+#custom-weather,
+#window,
+#custom-launcher,
+#custom-night,
+#custom-notification,
+#power-profiles-daemon,
+#pulseaudio-slider,
+#bluetooth {
+  background-color: @bg0;
+  padding: 0 15px 0 15px;
+  margin: 0 0 0 12px;
+  border-radius: 50px;
+}
+
+#custom-media {
+  background-color: @bg0;
+  border-radius: 50px;
+  margin: 0 0 0 12px
+}
+
+#clock {
+  color: @fg;
+  background-color: @bg0;
+  margin-right: 12px;
+  margin-left: 8px;
+}
+
+#custom-media {
+  color: @aqua;
+}
+
+#custom-notification {
+  color: @fg;
+}
+
+#power-profiles-daemon {
+  color: @blue;
+}
+
+#custom-pacman {
+  color: @orange;
+}
+
+#pulseaudio {
+  color: @yellow;
+}
+
+#pulseaudio-slider {
+    padding: 0;
+    margin: 0;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 100px;
+    border-radius: 5px;
+    background: @bg4;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: @blue;
+}
+
+#network {
+  color: @purple;
+}
+
+#custom-notification {
+  margin: 0 12px 0 12px;
+}
+
+#bluetooth {
+  color : @blue;
+}
+
+#workspaces button {
+  padding: 0px;
+  margin: 0px 3px;
+  min-width: 35px;
+  border-radius: 50px;
+  color: @bg4;
+  background: @bg0;
+  transition: all 0.3s ease-in-out;
+}
+#workspaces button.active {
+  border-radius: 50px;
+  background-color: @blue;
+  color: @bg0;
+  min-width: 75px;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+}
+
+#workspaces button:hover {
+  background-color: @purple;
+  color: @bg0;
+  border-radius: 50px;
+  min-width: 75px;
+  background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  color: @bg0;
+  border-radius: 16px;
+  min-width: 65px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
+}
+
+tooltip {
+  background: @bg0;
+  border: 1px solid @blue;
+  border-radius: 12px;
+}
+
+tooltip label {
+  color: @fg;
+  padding: 6px;
+}
+
